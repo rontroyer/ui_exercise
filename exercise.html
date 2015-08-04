@@ -12,9 +12,41 @@
 
         <!-- Personalized Content -->
         <script src="main.js" type="text/javascript"></script>
-        <link href="main.css" rel="stylesheet" />
+        <link href="main.css" rel="stylesheet">
 	</head>
 	<body>
+		<div id="container">
+			<div class="head">
+				<h1>Provider Directory</h1>
+				<h3>v2.0</h3><!-- This is really v0.1, but I'm replicating -->
+			</div>
+			<div class="content">
+				<div class="section"> <!-- easy section containing to allow for responsive design / smaller screens -->
+					<h2>Create Provider</h2>
+					<form action="./exersise.html" id="provider_form"> <!-- for this exercise, there is no action, but this allows for easier js form validation / submission -->
+						<label for="last_name">Last Name</label>
+						<input id="last_name" name="last_name" type="text" />
+						<label for="first_name">First Name</label>
+						<input id="first_name" name="first_name" type="text" />
+						<label for="email_address">Email Adress</label>
+						<input id="email_address" name="email_address" type="text" />
+						<label for="specialty">Specialty</label>
+						<input id="specialty" name="specialty" type="text" />
+						<label for="practice_name">Practice Name</label>
+						<input id="practice_name" name="practice_name" type="text" />
 
+						<input type="submit" value="Submit" />
+					</form>
+				</div>
+				<div class="section list_section"> <!-- easy section containing to allow for responsive design / smaller screens -->
+					<h2>Provider List</h2>
+					<select id="sort_by"></select>
+					<ul class="provider_list">
+					</ul>
+					<div class="fr cb remove_provider">Remove</div>
+				</div>
+				<div class="cb"></div>
+			</div>
+		</div>
 	</body>
 </html>
