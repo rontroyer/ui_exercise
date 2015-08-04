@@ -13,3 +13,140 @@ html, body {
 
 	-webkit-font-smoothing: antialiased;
 }
+
+input, textarea {font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;}
+
+.cb {clear:both;} .cl {clear:left;} .cr {clear:right;} .fl {float:left;} .fr {float:right;}
+.tc {text-align: center;} .tr {text-align: right;}
+
+
+h1,h2,h3 {margin: 0;}
+h1 {
+	font-size: 2.5em;
+	letter-spacing: -2px;
+}
+h2 {
+	display: inline-block;
+	letter-spacing: -.05em;
+	font-size: 1.2em;
+    margin-bottom: 1em;
+    font-weight: normal;
+    font-family: "Times", "Times New Roman", Times, serif;
+}
+h3 {
+	font-size:1.3em;
+	color:#666;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+input[type="submit"], input[type="text"], #sort_by, .remove_provider {
+	border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+
+input[type="text"], input[type="number"] {
+    display: block;
+    margin: 4px 0 12px 0;
+    padding: 3px;
+}
+
+input[type="submit"], .remove_provider {
+	background: #eee;
+	padding: 5px 16px;
+	margin: 1em 0;
+	cursor: pointer;
+}
+
+.head, .content {
+    display: block;
+    margin: 0 auto;
+    width: 780px;
+}
+
+.head {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+.list_section {
+	width:530px;
+}
+
+.remove_provider {
+	margin-top: 2em;
+}
+
+#sort_by {
+	float:right;
+    padding: 5px;
+}
+.section {
+    display: inline-block;
+    border: 5px solid #ccc;
+    background: #fff;
+    padding: 15px;
+    float: left;
+    height:340px;
+}
+
+.section:first-child {
+	margin-right: 10px;
+}
+
+/* Providers List */
+ul.provider_list, li.provider {
+	clear:both;
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+ul.provider_list {
+	height: 240px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-right: 14px;
+    margin-top: 10px;
+}
+
+li.provider {
+	min-width: 450px;
+	padding: 15px;
+	margin-left: 40px;
+	position: relative;
+}
+
+li.provider:nth-child(2n+0) {
+	background: #eee;
+}
+
+li.provider::before {
+	position: absolute;
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    left: -35px;
+    top: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #888;
+}
+
+li.provider.checked::before {
+	content:"\2713";
+}
+
+div.name {font-weight: bold; }
+div.email_address, div.practice_name {font-size: .8em; margin-top: .5em;}
